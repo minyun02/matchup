@@ -1,9 +1,16 @@
 com/matchup/home/Application.java
  com.matchup.home.Application
-com/matchup/home/web/dto/HelloResponseDto.java
- com.matchup.home.web.dto.HelloResponseDto
+com/matchup/home/web/PostsApiController.java
+ com.matchup.home.web.PostsApiController
+com/matchup/home/service/posts/PostsService.java
+ com.matchup.home.service.posts.PostsService
+com/matchup/home/web/dto/PostsSaveRequestDTO.java
+ com.matchup.home.web.dto.PostsSaveRequestDTO
+ com.matchup.home.web.dto.PostsSaveRequestDTO$PostsSaveRequestDTOBuilder
 com/matchup/home/web/HelloController.java
  com.matchup.home.web.HelloController
+com/matchup/home/web/dto/HelloResponseDto.java
+ com.matchup.home.web.dto.HelloResponseDto
 com/matchup/home/domain/posts/PostsRepository.java
  com.matchup.home.domain.posts.PostsRepository
 com/matchup/home/domain/posts/Posts.java

@@ -11,8 +11,8 @@ import javax.persistence.*;
 @Entity
 public class Posts {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id //테이블의 pk값을 나타낸다.
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //pk값 생성규칙
     private Long id;
 
     @Column(length = 500, nullable = false)
