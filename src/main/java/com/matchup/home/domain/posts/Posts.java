@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id //테이블의 pk값을 나타낸다.
     @GeneratedValue(strategy = GenerationType.IDENTITY) //pk값 생성규칙
@@ -34,4 +34,5 @@ public class Posts {
         this.title = title;
         this.content = content;
     }
+
 }
