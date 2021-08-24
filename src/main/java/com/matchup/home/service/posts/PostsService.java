@@ -8,10 +8,10 @@ import com.matchup.home.web.dto.PostsSaveRequestDTO;
 import com.matchup.home.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.util.List;
-import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
@@ -40,6 +40,13 @@ public class PostsService {
     public List<PostsListResponseDto> findAllDesc(){
         return postsRepository.findAllDesc().stream()
                 .map(PostsListResponseDto::new) //람다식
-                .collect(Collector.toList());
+                .collect(Collectors.toList());
+    }
+
+    @Transactional
+    public void delete (long id){
+        Posts posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id="+ id));
+
+        postsRepository.delete(posts);
     }
 }
